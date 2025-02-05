@@ -1,20 +1,20 @@
 import java.util.ArrayList;
 
 public class GestionStock {
-    private ArrayList<Produit> produits;
+    private ArrayList<Product> products;
 
 
-    public void ajouterProduit(Produit p) {
-        produits.add(p);
+    public void ajouterProduit(Product p) {
+        products.add(p);
     }
 
-    public void listerProduits() {
-        for (Produit p : produits) {
+    public void listerProducts() {
+        for (Product p : products) {
             System.out.println(p);
         }
     }
 
-    public void trierProduit() {
+    public void trierProduct() {
 
     }
 
