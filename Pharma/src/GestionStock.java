@@ -3,14 +3,24 @@ import java.util.ArrayList;
 public class GestionStock {
     private ArrayList<Product> products;
 
-
-    public void ajouterProduit(Product p) {
-        products.add(p);
+    public GestionStock() {
+        this.products = new ArrayList<>();
     }
-
-    public void listerProducts() {
-        for (Product p : products) {
-            System.out.println(p);
+    public void addProduct(Product product) {
+        if (product.getQuantity() > 0) {  // Vérification que la quantité est valide
+            products.add(product);
+            System.out.println(product +" added to stock.");
+        } else {
+            System.out.println("Cannot add product. Invalid quantity.");
+        }
+    }
+    public void displayProducts() {
+        if (products.isEmpty()) {
+            System.out.println("Stock empty.");
+        } else {
+            for (Product product : products) {
+                System.out.println(product);
+            }
         }
     }
 
