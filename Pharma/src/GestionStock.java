@@ -27,6 +27,4 @@ public class GestionStock {
     public void trierProduct() {
 
     }
-
-
 }
