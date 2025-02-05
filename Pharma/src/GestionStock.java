@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class GestionStock {
     private ArrayList<Product> products;
@@ -7,7 +9,7 @@ public class GestionStock {
         this.products = new ArrayList<>();
     }
     public void addProduct(Product product) {
-        if (product.getQuantity() > 0) {  // Vérification que la quantité est valide
+        if (product.getQuantity() > 0) {
             products.add(product);
             System.out.println(product +" added to stock.");
         } else {
@@ -25,7 +27,9 @@ public class GestionStock {
     }
 
     public void trierProduct() {
+        for (Product product : products) {
 
+        }
     }
 
 
