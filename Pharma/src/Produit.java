@@ -2,7 +2,7 @@ public class Produit {
     private String nom;
     private float prix;
     private int quantite;
-    private String categorie;
+    private Categorie categorie;
 
     public Produit(String nom, float prix, int quantite, String categorie) {
         this.nom = nom;
@@ -20,7 +20,10 @@ public class Produit {
     public void setPrix(float prix) {
         this.prix = prix;
     }
-    public String getCategorie() {
+
+    public Categorie getCategorie() {
         return categorie;
     }
+
+    public void setCategorie(Categorie categorie) {}
 }
