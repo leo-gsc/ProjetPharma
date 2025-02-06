@@ -35,8 +35,8 @@ public class Product {
         this.price = price;
     }
 
-    public Category getCategory() {
-        return category;
+    public String getCategory() {
+        return category.getName();
     }
 
     public void setCategory(Category category) {
@@ -45,6 +45,6 @@ public class Product {
 
     @Override
     public String toString() {
-        return getName() + " : " + getPrice() + "€, Stock: " + getQuantity() + ", Category: " + getCategory().getName();
+        return getName() + " : " + getPrice() + "€, Stock: " + getQuantity() + ", Category: " + getCategory();
     }
 }
