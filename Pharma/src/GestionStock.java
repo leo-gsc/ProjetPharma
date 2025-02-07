@@ -73,6 +73,13 @@ public class GestionStock {
         }
     }
 
+    /**
+     * Recherche un produit spécifique dans le stock par son nom.
+     * Si le produit est trouvé, affiche son nom et sa quantité.
+     * 
+     * @param name Le produit à rechercher dans le stock.
+     *             Cette méthode compare le produit directement par référence, et non par son nom.
+     */
     public void search(Product name) {
         for (Product product : products) {
             if (product == name){
