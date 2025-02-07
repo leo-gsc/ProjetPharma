@@ -3,7 +3,7 @@ public class Main {
         Category cosmetic = new Category("cosmetic");
         Category medicine = new Category("medicine");
 
-        Product doliprane = new Product("doliprane", 13.0f, 2, medicine);
+        Product doliprane = new Product("doliprane", 13.0f, 50, medicine);
         Product smecta = new Product("smecta", 13.0f, 2, medicine);
         Product shampoo = new Product("shampoo", 13.0f, 2, cosmetic);
 
@@ -11,10 +11,11 @@ public class Main {
         stock.addProduct(smecta);
         stock.addProduct(shampoo);
         stock.addProduct(doliprane);
+        stock.search(doliprane);
+        //stock.remove(doliprane);
         stock.displayProducts();
         stock.sortProducts();
         stock.displayProducts();
-
 
 
         System.out.println(doliprane.getPrice());
