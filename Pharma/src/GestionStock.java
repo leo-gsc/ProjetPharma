@@ -3,19 +3,32 @@ import java.util.ArrayList;
 public class GestionStock {
     private final ArrayList<Product> products;
 
+    /**
+     * Constructeur de la classe GestionStock.
+     * Initialise une liste vide pour stocker les produits.
+     */
     public GestionStock() {
         this.products = new ArrayList<>();
     }
 
+    /**
+     * Ajoute un produit au stock si sa quantité est valide (> 0).
+     *
+     * @param product Le produit à ajouter au stock.
+     */
     public void addProduct(Product product) {
         if (product.getQuantity() > 0) {
             products.add(product);
-            System.out.println(product +" added to stock.");
+            System.out.println(product + " added to stock.");
         } else {
-            System.out.println("cannot add an inexistent product");
+            System.out.println("Cannot add an inexistent product");
         }
     }
 
+    /**
+     * Affiche la liste des produits en stock.
+     * Si aucun produit n'est disponible, un message indique que le stock est vide.
+     */
     public void displayProducts() {
         if (products.isEmpty()) {
             System.out.println("Stock empty.");
@@ -26,6 +39,11 @@ public class GestionStock {
         }
     }
 
+    /**
+     * Calcule et retourne la taille actuelle de la liste de produits.
+     *
+     * @return Le nombre de produits en stock.
+     */
     public int lenArray() {
         int len = 0;
         for (Product product : products) {
@@ -34,24 +52,24 @@ public class GestionStock {
         return len;
     }
 
+    /**
+     * Trie les produits en stock par ordre alphabétique de leur nom en utilisant le tri par sélection.
+     */
     public void sortProducts() {
         int lenA = lenArray();
 
         for (int i = 0; i < lenA - 1; i++) {
             int min = i;
             for (int j = i + 1; j < lenA; j++) {
-                if (products.get(j).getName().compareTo(products.get(min).getName()) <0) {
+                if (products.get(j).getName().compareTo(products.get(min).getName()) < 0) {
                     min = j;
                 }
             }
-            if (min != i){
+            if (min != i) {
                 Product exch = products.get(i);
                 products.set(i, products.get(min));
                 products.set(min, exch);
             }
         }
     }
-
-
-
 }
