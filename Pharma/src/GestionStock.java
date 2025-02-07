@@ -87,4 +87,15 @@ public class GestionStock {
             }
         }
     }
+
+    public void remove(Product name) {
+        for (int i = 0; i < products.size(); i++ ) {
+            if (products.get(i) == name) {
+                String rem = products.get(i).getName();
+                products.remove(i);
+                System.out.println(rem + " got removed");
+            }
+
+        }
+    }
 }
