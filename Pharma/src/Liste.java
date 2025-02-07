@@ -20,7 +20,7 @@ public class Liste {
                 break;
             }
         }
-        if (!trouve) {
+        if (trouve == false) {
             System.out.println("Le produit que vous cherchez n'existe pas ou n'est pas disponible : " + produitRecherche);
         }
     }
