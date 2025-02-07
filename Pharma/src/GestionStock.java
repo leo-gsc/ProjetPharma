@@ -72,4 +72,12 @@ public class GestionStock {
             }
         }
     }
+
+    public void search(Product name) {
+        for (Product product : products) {
+            if (product == name){
+                System.out.println(product.getName() + " found. quantity: " + product.getQuantity());
+            }
+        }
+    }
 }
